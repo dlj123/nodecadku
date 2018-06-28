@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/upload.css" rel="stylesheet">
+</head>
+<body class="body_bg01">
+  <% include common/mainheader.html %>
+  <section>
+    <div class="mxup_wrap">
+	    <ul class="bread">
+		    <li><a href="#" class="home_icon"></a></li>
+		    <li class="last_nav">模型库</li>
+	    </ul>
+     <h2 class="mxup_tit">上传CAD模型</h2>
+     <div class="upfile_area">
+	     <h3 class="mxup_label">1.上传模型文件</h3>
+	     <div class="upfile_box">
+         <div class="upfile_top">
+	         <a href="javascript:;" id="upfilebtn">选择模型文件</a>
+	         <p>支持模型文件：STL、OBJ、STEP、STP。
+		         （单文件50M以内）</p>
+         </div>
+         <div id="fileuplist"></div>
+         <div id="filelist hide">
+         	<!-- <dl class="upfile_item uploader-list">
+         		    <dt><img src="images/paymx_moren.jpg" alt="" title=""></dt>
+         		    <dd>
+         		        <h5>Engine Body.sldprt</h5>
+         		        <div class="progress"><div></div></div>
+         		        <p class="size">5.2 M</p>
+         		        <a href="#" class="updel_icon"></a>
+         		    </dd>
+         		             			    
+         	</dl> -->
+         	<!-- <dl class="upfile_item">
+         		    <dt><img src="images/paymx_moren.jpg" alt="" title=""></dt>
+         		    <dd>
+         		         		    <h5>Engine Body.sldprt</h5>
+         		         		    <div class="progress"><div></div></div>
+         		         		    <p class="size">5.2 M</p>
+         		         		    <a href="javascript:;" class="updel_icon"></a>
+         		    </dd>
+         		             			    
+         	</dl> -->
+         </div>
+	    </div>
+     </div>
+	   <div class="uppic_area">
+		   <h3 class="mxup_label">2.上传模型渲染图</h3>
+		   <div class="uppic_box">
+			   <div class="uppic_top">
+				   <div id="upimgbtn">
+				     <a href="#">选择模型渲染图</a>
+				   </div>
+				   <!-- <form id="uploadImgForm">
+				                        <input type="file" name="file" id="up_img" class="hide" />
+				                      </form> -->
+                   <p>支持图片文件：PNG、JPG（单图500K以内）
+					   建议最小尺寸820*496px（长宽比4:3）</p>
+			    </div>
+			    <div id="imgList">
+			   		<!-- <dl class="uppic_item">
+			   			<dt><img src="images/index_album.jpg" alt="" title=""></dt>
+			   			<dd>
+			   				<h5>Engine Body.sldprt</h5>
+			   				<span class="moren"></span>
+			   				<a href="javascript:;" class="updel_icon"></a>
+			   			</dd>
+			   		</dl>
+			   		<dl class="uppic_item">
+			   			<dt><img src="images/index_album.jpg" alt="" title=""></dt>
+			   			<dd>
+			   						   <h5>Engine Body.sldprt</h5>
+			   						   <div class="moren_wrap"><span class="moren">默认</span></div>
+			   						   <a href="javascript:;" class="updel_icon"></a>
+			   			</dd>
+			   					   
+			   		</dl>
+			   		<dl class="uppic_item">
+			   					   <dt><img src="images/index_album.jpg" alt="" title=""></dt>
+			   					   <dd>
+			   						   <h5>Engine Body.sldprt</h5>
+			   						   <div class="moren_wrap"><span class="setmoren">设为默认</span></div>
+			   						   <a href="javascript:;" class="updel_icon"></a>
+			   					   </dd>
+			   		</dl> -->
+			   </div>
+		   </div>
+	   </div>
+	   <div class="upparam_area">
+		   <h3 class="mxup_label">3.填写模型参数</h3>
+		   <div class="upparam_box">
+			   <h5 class="param_label">模型名称<em>*</em></h5>
+			   <input type="text" placeholder="填写6-10个汉字的标题" class="common_txt param_txt">
+			   <h5 class="param_label">模型分类<em>*</em></h5>
+			   <div class="param_type">
+				   <div class="dropdown_wrap mr10">
+					   <div class="dropdown_link">
+						   <span class="dropdownsel">请选择主分类</span>
+						   <span class="dropdownicon"></span>
+					   </div>
+					   <ul class="dropdown_menu">
+						   <li><a href="javascript:;">主分类一</a></li>
+						   <li><a href="javascript:;">主分类二</a></li>
+						   <li><a href="javascript:;">主分类三</a></li>
+						   <li><a href="javascript:;">主分类四</a></li>
+					   </ul>
+				   </div>
+				   <div class="dropdown_wrap">
+					   <div class="dropdown_link">
+						   <span class="dropdownsel">请选择子分类</span>
+						   <span class="dropdownicon"></span>
+					   </div>
+					   <ul class="dropdown_menu">
+						   <li><a href="javascript:;">子分类一</a></li>
+						   <li><a href="javascript:;">子分类二</a></li>
+						   <li><a href="javascript:;">子分类三</a></li>
+						   <li><a href="javascript:;">子分类四</a></li>
+					   </ul>
+				   </div>
+				   <h5 class="param_label">共享许可<em>*</em></h5>
+				   <div class="dropdown_wrap_allow">
+					   <div class="dropdown_link_allow">
+						   <span class="dropdownsel">许可方式</span>
+						   <span class="dropdownicon"></span>
+					   </div>
+					   <ul class="dropdown_menu_allow">
+						   <li><a href="javascript:;"><span><i class="icon01"></i></span>不使用原创授权</a></li>
+						   <li><a href="javascript:;"><span><i class="icon02"></i><i class="icon03"></i><i class="icon04"></i></span>署名-非商业使用-禁止演绎</a></li>
+						   <li><a href="javascript:;"><span><i class="icon02"></i><i class="icon03"></i><i class="icon05"></i></span>署名-非商业使用-相同方式共享</a></li>
+						   <li><a href="javascript:;"><span><i class="icon02"></i><i class="icon03"></i></span>署名-非商业使用</a></li>
+						   <li><a href="javascript:;"><span><i class="icon02"></i><i class="icon04"></i></span>署名-禁止演绎</a></li>
+						   <li><a href="javascript:;"><span><i class="icon02"></i><i class="icon05"></i></span>署名-相同方式共享</a></li>
+					   </ul>
+				   </div>
+			   </div>
+			   <h5 class="param_label">下载方式<em>*</em></h5>
+			   <ul class="download_tab">
+				   <li class="download_tab_item active">
+					   <i></i>积分下载
+				   </li>
+				   <li class="download_tab_item">
+					   <i></i>现金下载（<a href="#">申请</a>）
+					   <div class="tooltip">只有实名认证设计师可发布现金模型</div>
+				   </li>
+			   </ul>
+			   <div class="download_con"style="display: block">
+				   <div class="dropdown_wrap_score mr10">
+					   <div class="dropdown_link_score">
+						   <span class="dropdownsel">10</span>
+						   <span class="dropdownicon"></span>
+					   </div>
+					   <ul class="dropdown_menu_score">
+						   <li><a href="javascript:;">10</a></li>
+						   <li><a href="javascript:;">20</a></li>
+						   <li><a href="javascript:;">30</a></li>
+						   <li><a href="javascript:;">40</a></li>
+						   <li><a href="javascript:;">50</a></li>
+						   <li><a href="javascript:;">60</a></li>
+					   </ul>
+				   </div>每次下载获得的积分，系统将扣除30%的交易税
+			   </div>
+			   <div class="download_con">
+				   售价<input type="text" class="common_txt downmoney_txt">元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				   优惠价<input type="text" class="common_txt downmoney_txt">元
+			   </div>
+			   <h5 class="param_label">模型介绍<em>*</em></h5>
+         <div class="expose_wrap">
+	         <span class="expose_label">曝光指数</span>
+	         <div class="expose_progress"><div></div></div>
+	         <em class="expose_value">80%</em>
+         </div>
+			   <textarea class="common_txt expose_area" placeholder="更详细的模型介绍，将带来更多曝光率，让更多人关注，产生更多的下载和销售"></textarea>
+			   <h5 class="param_label">软件版本<em>*</em></h5>
+			   <div class="dropdown_wrap_version mr10">
+				   <div class="dropdown_link_version">
+					   <span class="dropdownsel">请选择软件版本</span>
+					   <span class="dropdownicon"></span>
+				   </div>
+				   <ul class="dropdown_menu_version">
+					   <li><a href="javascript:;">AtuoCAD</a></li>
+					   <li><a href="javascript:;">ProE/Creo</a></li>
+					   <li><a href="javascript:;">Solidworks</a></li>
+					   <li><a href="javascript:;">UG</a></li>
+					   <li><a href="javascript:;">CATIA</a></li>
+					   <li><a href="javascript:;">Sketchup</a></li>
+					   <li><a href="javascript:;">CAXA</a></li>
+					   <li><a href="javascript:;">Inventor</a></li>
+					   <li><a href="javascript:;">Solidege</a></li>
+				   </ul>
+			   </div>
+			   <h5 class="param_label">模型标签<em>*</em><span>多个标签，请用空格分隔</span></h5>
+			   <div class="tags-box">
+				   <div class="tag">
+					   <span>钢铁侠</span>
+					   <a href="javascript:;">×</a>
+				   </div>
+				   <input type="text" class="tags-addtxt" value="添加关键词">
+			   </div>
+			   <a class="submit_btn">确认</a>
+		   </div>
+	   </div>
+    </div>
+  </section>
+  <% include common/mainfooter.html %>
+<script type="text/javascript" src="/scripts/lib/require.js" data-main="/scripts/upload"></script>
+</body>
+</html>

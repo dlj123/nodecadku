@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/upload.css" rel="stylesheet"><!-- 任意一个页面的css均可 -->
+</head>
+<body>
+	<div class="dmask" style="display: block;">
+	<div class="dcommon_notice">
+     <div class="dcommon_notice_tit">
+	       <h3>提示</h3>
+	       <a href="#"></a>
+     </div>
+		<div class="dcommon_conts">
+		   <p class="dcommon_notice_info">提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容</p>
+			 <div class="dcommon_notice_ope">
+				<a href="#" class="dconcelbtn">取消</a>
+				<a href="#" class="dconfirmbtn">确认</a>
+			 </div>
+		</div>
+	</div>
+	</div>
+	<div class="dmask " style="display: none;">
+		<div class="dcommon_check">
+			<p class="check_sucess">恭喜您操作成功</p>
+		</div>
+	</div>
+	<div class="dmask" style="display: none;">
+		<div class="dcommon_check">
+			<p class="check_fail">恭喜您操作成功</p>
+		</div>
+	</div>
+</body>
+</html>

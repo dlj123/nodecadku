@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/tasklist.css" rel="stylesheet">
+</head>
+<body class="body_bg01">
+ <% include common/mainheader.html %>
+  <section>
+    <div class="task_wrap">
+	    <ul class="bread">
+		    <li><a href="#" class="home_icon"></a></li>
+		    <li><a href="#">任务大厅</a></li>
+		    <li class="last_nav">发布任务</li>
+	    </ul>
+	    <div class="task_con">
+		    <div class="task_lf">
+			    <h2 class="sendtask_tit">发布设计任务</h2>
+			    <div class="sendtask_box">
+				    <h5 class="sendtask_label">任务标题<em>*</em></h5>
+				    <input type="text" class="common_txt taskname_txt" placeholder="填写6-10个汉字的标题">
+				    <h5 class="sendtask_label">设计类型<em>*</em></h5>
+				    <div class="type_area">
+					    <a href="#" class="active">人物设计</a>
+					    <a href="#">动物植物</a>
+					    <a href="#">机械军火</a>
+					    <a href="#">场景设计</a>
+					    <a href="#">复合设计</a>
+					    <a href="#">人物设计</a>
+				    </div>
+				    <h5 class="sendtask_label">预算</h5>
+				    <div class="budget_info">
+					    <input type="text" class="common_txt taskbudget_txt mr14" placeholder=""> 到
+					    <input type="text" class="common_txt taskbudget_txt mlr14" placeholder=""> 元
+				    </div>
+				    <h5 class="sendtask_label">招标截止日期</h5>
+				    <div class="task-time_wrap"><input type="text" class="common_txt task-time"></div>
+				    <h5 class="sendtask_label">需求描述<em>*</em></h5>
+				    <textarea class="common_txt taskrequest_area" placeholder="您可以从模型形状、精细程度、特殊处理等方面描述..."></textarea>
+				    <h5 class="sendtask_label">上传附件</h5>
+				    <div class="attachment_wrap">
+					    <a href="javascript:;" class="attachment_upbtn" id="attachment_upbtn"></a>
+					    <ul class="attachment_lb" id="attachment_lb">
+						   <!--  <li><span>长寿挖 .jpg</span><a href="javascript:;">删除</a></li>
+						   <li><span>青蛙素材包 .zip</span><a href="javascript:;">删除</a></li>
+						   <li><span>井底之蛙 .jpg</span><a href="javascript:;">删除</a></li> -->
+					    </ul>
+				    </div>
+				    <h5 class="sendtask_label">联系方式</h5>
+				    <div class="task_connect_area">
+					    <input type="text" class="common_txt task_connect_txt01">
+					    <input type="text" class="common_txt task_connect_txt01">
+					    <input type="text" class="common_txt task_connect_txt02">
+					    <a href="javascript:;" class="task_getyzm_btn">获取短信验证码</a>
+					    <input type="text" class="common_txt task_connect_txt01">
+				    </div>
+				    <p class="task_connect_notice"><em>*</em>请留下联系方式，方便设计师、打印服务商与您沟通，商讨任务的价格、完成时间等细节。</p>
+				    <a href="#" class="sendtask_btn">发布任务</a>
+			    </div>
+		    </div>
+		    <div class="tasklist_rh">
+			    <div class="tasklist_fixed">
+				    <h5 class="sendtaskrh_label">全程保障交易安全</h5>
+				    <p class="sendtaskrh_ensure">1.  验收满意后再付款<br>2.  设计师100%身份认证<br>3.  不收取雇主任何费用</p>
+				    <h5 class="sendtaskrh_label">发任务遇问题？咨询客服</h5>
+				    <p class="sendtaskrh_qq">客服QQ：3210292632<br><span>周一至周五9:00-17:00</span></p>
+				    <p class="sendtaskrh_phone">客服电话：027-87875642<br><span>周一至周五9:00-17:00</span></p>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+  </section>
+  <% include common/mainfooter.html %>
+<script type="text/javascript" src="/scripts/lib/require.js" data-main="/scripts/tasklist"></script>
+
+
+</body>
+</html>

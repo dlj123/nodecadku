@@ -1,0 +1,300 @@
+@import "reset.scss";
+@import "common.scss";
+@import "widget/jquery.jcrop.scss";
+@import "widget/webupload.scss";
+.clearfix{
+	@extend %clearfix;
+}
+.personalinfo_lf,.personalinfo_rh{
+	@extend %fl;
+}
+.personalinfo_lf{
+	width: 590px;
+	margin-right: 85px;
+}
+.personalinfo_rh{
+    width: 205px;
+	padding-top: 134px;
+}
+.topinfo_progress_wrap{
+    width: 590px;
+	margin: 30px 0 50px;
+	.topinfo_progress_value{
+		width: 100%;
+		font-size: 14px;
+		color: #333;
+		padding-bottom: 10px;
+		text-align: left;
+		em{
+			font-size: 14px;
+			color: #db2b22;
+			font-weight: bold;
+			margin-right: 5px;
+		}
+	}
+	.topinfo_progress_bar{
+		width: 590px;
+		height: 10px;
+		background: #e5e5e5;
+		div{
+			width: 30%;
+			height: 10px;
+			background: #db2b22;
+		}
+	}
+	.topinfo_progress_notice{
+		width: 100%;
+		font-size: 12px;
+		color: #333;
+		text-align: right;
+		padding-top: 6px;
+		em{
+			font-size: 12px;
+			color: #db2b22;
+			margin-left: 5px;
+		}
+	}
+}
+.personalinfo_item{
+	width: 590px;
+	font-size: 0;
+	@extend %clearfix;
+	margin-bottom: 25px;
+	.personalinfo_label{
+		display: block;
+		@extend %fl;
+		width: 85px;
+		font-size: 14px;
+		color: #333;
+		font-weight: bold;
+		padding-right: 10px;
+		text-align: right;
+		line-height: 36px;
+	}
+	.personalinfo_name{
+		width: 505px;
+		font-size: 14px;
+		color: #333;
+		line-height: 36px;
+	}
+	.nikename_txt{
+		float: left;
+		@include txt01(505px,36px,#e5e5e5);
+	}
+}
+.sex_wrap{
+	width: 505px;
+	font-size: 0;
+	@extend %fl;
+	span{
+		float: left;
+		font-size: 14px;
+		color: #333;
+		margin-right: 30px;
+		line-height: 36px;
+		cursor: pointer;
+		i{
+			display: inline-block;
+			vertical-align: middle;
+			width: 14px;
+			height: 14px;
+			background: url("../images/icon-sprite01.png") no-repeat -118px -24px;
+			margin-right: 6px;
+		}
+		i.active{
+			background-position: -137px -24px;
+		}
+	}
+}
+.personalinfo_cont{
+	width: 505px;
+	@extend %fl;
+	font-size: 0;
+	.bindedphone,.bindagain_link{
+		@include inlineblock();
+		line-height: 36px;
+	}
+	.bindedphone{
+		font-size: 14px;
+		color: #999;
+	}
+	.bindagain_link{
+		font-size: 14px;
+		color: #db2b22;
+		margin-left: 20px;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.mr5{
+	margin-right: 5px;
+}
+.dropdown_wrap_city{
+	@include dropdownwrap(200px,36px);
+	@include inlineblock();
+}
+.dropdown_link_city{
+	@include dropdownlink(200px,36px,13px);
+}
+.dropdown_menu_city{
+	@extend %dropdownmenu;
+}
+.detailadress_txt{
+	@include txt01(505px,36px,#e5e5e5);
+	margin-top: 10px;
+}
+.lat_area{
+	width: 380px;
+	height: 36px;
+	border: 1px solid #e5e5e5;
+	font-size: 14px;
+	color: #999;
+	line-height: 34px;
+	padding: 0 10px;
+	@include inlineblock();
+}
+.lat_link{
+	@include inlineblock();
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #db2b22;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 5px;
+	cursor: pointer;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.tags_wrap{
+	width: 505px;
+	min-height: 36px;
+	padding: 5px 9px 0;
+	border: 1px solid #e5e5e5;
+	font-size: 0;
+	.tags_box{
+		@include inlineblock();
+		margin-right: 5px;
+		margin-bottom: 5px;
+		height: 24px;
+		line-height: 22px;
+		padding: 0 25px 0 9px;
+		background: #fae2e0;
+		border: 1px solid #e66a64;
+		font-size: 0;
+		position: relative;
+		span,a{
+			@include inlineblock();
+		}
+		span{
+			font-size: 14px;
+			color: #db2b22;
+		}
+		a{
+			font-size: 14px;
+			color: #db2b22;
+			position: absolute;
+			right: 9px;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.skills_wrap{
+	width: 505px;
+	font-size: 0;
+	margin-top: 10px;
+	span{
+		@include inlineblock();
+		height: 32px;
+		line-height: 32px;
+		padding: 0 20px;
+		background: #f0f0f0;
+		font-size: 14px;
+		color: #666;
+		margin-right: 10px;
+		margin-top: 5px;
+		cursor: pointer;
+		&:hover{
+			background: #db2b22;
+			color: #fff;
+		}
+	}
+}
+.personalinfo_intro_area{
+	@include area01(505px,200px,#e5e5e5);
+	@extend %fl;
+}
+.submit_wrap{
+	width: 590px;
+	padding-left: 85px;
+	padding-top: 30px;
+	a.save_btn{
+		@include btn01(120px,40px,#db2b22,16px);
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.personal_pic{
+    display: block;
+	margin-left: 25px;
+	width: 140px;
+	height: 140px;
+	overflow: hidden;
+	img{
+		display: block;
+		width: 140px;
+		height: 140px;
+	}
+}
+.personalpic_btn{
+	@include btn01(140px,32px,#db2b22,14px);
+	display: block;
+	margin-left: 25px;
+	margin-top: 10px;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.pic_format{
+	padding-top: 15px;
+	font-size: 12px;
+	color: #666;
+	line-height: 22px;
+}
+
+.markarea_layer{
+	@include common_layerbox(1000px);
+	top: 120px;
+}
+.map_box{
+	width: 1000px;
+	height: 520px;
+	background: #ccc;
+}
+.location_show{
+	width: 100%;
+	font-size: 16px;
+	color: #333;
+	padding: 25px 0 20px;
+	line-height: 24px;
+	text-align: center;
+}
+.mapsubmit_btn{
+	@include btn01(100px,40px,#db2b22,16px);
+	display: block;
+	margin: 0 auto 25px;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+.editepic_layer{
+	@include common_layerbox(800px);
+	top: 150px;
+}

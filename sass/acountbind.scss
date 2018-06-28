@@ -1,0 +1,373 @@
+@import "reset.scss";
+@import "common.scss";
+
+.account_now{
+	width: 100%;
+	padding: 30px 0 35px;
+	font-size: 16px;
+	color: #333;
+	em{
+		font-weight: bold;
+	}
+}
+.accountbind_lb{
+	width: 765px;
+	li{
+		width: 765px;
+		@extend %clearfix;
+		margin-bottom: 40px;
+	}
+}
+.accountbind_lb.pl30{
+	padding-left: 30px;
+}
+.acountbind_info{
+	@extend %fl;
+	dt{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		@extend %fl;
+		margin-right: 20px;
+		text-align: center;
+	}
+	dd{
+		@extend %fl;
+		h5{
+			font-size: 16px;
+			color: #333;
+			font-weight: bold;
+			margin-bottom: 5px;
+			span{
+				@include inlineblock();
+				font-size: 12px;
+				color: #ff4b4b;
+				margin-left: 10px;
+			}
+		}
+		h5.lh50{
+			line-height: 50px;
+		}
+		p{
+			font-size: 12px;
+			color: #999;
+		}
+	}
+}
+.bind01 dt{
+	background: #7bd45a;
+	&:before{
+		@include inlineblock();
+		content: "";
+		width: 28px;
+		height: 23px;
+		background: url("../images/icon-sprite01.png") no-repeat -533px -25px;
+		margin-top: 13px;
+	}
+}
+.bind02 dt{
+	background: #fc6060;
+	&:before{
+		@include inlineblock();
+		content: "";
+		width: 11px;
+		height: 30px;
+		background: url("../images/icon-sprite01.png") no-repeat -573px -22px;
+		margin-top: 10px;
+	}
+}
+.bind03 dt{
+	  background: #fc6161;
+	  &:before{
+		  @include inlineblock();
+		  content: "";
+		  width: 11px;
+		  height: 30px;
+		  background: url("../images/icon-sprite01.png") no-repeat -573px -22px;
+		  margin-top: 10px;
+	  }
+  }
+.nobind dt{
+	background: #999;
+}
+.bind04 dt:before,.bind05 dt:before,.bind06 dt:before,.bind07 dt:before,.bind08 dt:before{
+	@include inlineblock(top);
+	content: "";
+	background: url("../images/icon-sprite01.png") no-repeat;
+}
+.bind04 dt{
+	&:before{
+		width: 36px;
+		height: 24px;
+		background-position: -474px -62px;
+		margin-top: 13px;
+	}
+}
+.bind04.active dt{
+	background: #f6bc39;
+}
+.bind05 dt{
+	&:before{
+		width: 24px;
+		height: 35px;
+		background-position: -529px -57px;
+		margin-top: 7px;
+	}
+}
+.bind05.active dt{
+	background: #ff7f7c;
+}
+.bind06 dt{
+	&:before{
+		width: 38px;
+		height: 33px;
+		background-position: -570px -57px;
+		margin-top: 8px;
+	}
+}
+.bind06.active dt{
+	background: #ff5450;
+}
+.bind07 dt{
+	&:before{
+		width: 41px;
+		height: 33px;
+		background-position: -617px -57px;
+		margin-top: 8px;
+	}
+}
+.bind07.active dt{
+	background: #32c55f;
+}
+.bind08 dt{
+	&:before{
+		width: 32px;
+		height: 33px;
+		background-position: -670px -57px;
+		margin-top: 7px;
+	}
+}
+.bind08.active dt{
+	background: #4abbee;
+}
+.accountbind_intro{
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	border-top: 1px solid #e5e5e5;
+	font-size: 14px;
+	color: #999;
+	line-height: 24px;
+}
+.acountbind_opes{
+	@extend %fr;
+	padding-top: 10px;
+	min-width: 220px;
+	text-align: left;
+	font-size: 0;
+	.acountbind_btn{
+		@include btn01(100px,32px,#db2b22,14px);
+		margin-left: 10px;
+		&:hover{
+			background: #f53127;
+		}
+	}
+	.acountbinded_btn{
+		@include btn01(100px,32px,#999,14px);
+		margin-left: 10px;
+		&:hover{
+			background: #666;
+		}
+	}
+}
+.modifypwd_info{
+	width: 410px;
+	margin: 0 auto;
+	.oldemail{
+		width: 100%;
+		font-size: 14px;
+		color: #333;
+		line-height: 1;
+		margin-bottom: 20px;
+		padding-left: 25px;
+		em{
+			font-weight: bold;
+			font-size: 14px;
+		}
+	}
+	.getyzm{
+		width: 100%;
+		font-size: 0;
+		margin-bottom: 20px;
+		.getyzm_label,.getyzm_txt,.getyzm_btn{
+			@include inlineblock();
+		}
+	}
+	.getyzm_label{
+		width: 90px;
+		text-align: right;
+		padding-right: 5px;
+		font-size: 14px;
+		color: #333;
+		font-weight: bold;
+	}
+	.getyzm_txt{
+		@include txt01(200px,36px,#e5e5e5);
+		margin-right: 5px;
+	}
+	.getyzm_btn{
+		@include btn01(115px,36px,#db2b22,14px);
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	.modifypwd_nextbtn{
+		padding-left: 90px;
+		padding-top: 30px;
+		a{
+			@include btn01(320px,40px,#db2b22,16px);
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.modifypwd_item{
+	width: 100%;
+	font-size: 0;
+	margin-bottom: 20px;
+	.getyzm_label,.newpwd_txt{
+		@include inlineblock();
+	}
+	.getyzm_label{
+		width: 90px;
+		text-align: right;
+		padding-right: 5px;
+		font-size: 14px;
+		color: #333;
+		font-weight: bold;
+	}
+	.newpwd_txt{
+		@include txt01(320px,36px,#e5e5e5);
+	}
+}
+.success_icon{
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid #7bd45a;
+	text-align: center;
+	margin: 10px auto 20px;
+	&:before{
+		@include inlineblock();
+		content: "";
+		width: 28px;
+		height: 20px;
+		background: url("../images/icon-sprite01.png") no-repeat -394px -3px;
+		margin-top: 15px;
+	}
+}
+.success_notice01,.success_notice02{
+	width:100%;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.success_notice01{
+	color: #333;
+	em{
+		font-weight: bold;
+	}
+}
+.success_notice02{
+	color: #666;
+	em{
+		color: #db2b22;
+		margin: 0 5px;
+		font-weight: bold;
+	}
+}
+.modify_error{
+	width: 100%;
+	font-size: 12px;
+	color: #db2b22;
+	padding-left: 20px;
+	line-height: 1;
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: -10px;
+	&:before{
+		display: block;
+		content: "";
+		width: 14px;
+		height: 14px;
+		background: url("../images/icon-sprite01.png") no-repeat -229px -3px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+.weixin_layer{
+	@include common_layerbox(500px);
+}
+.weixin_bind_area{
+	width: 100%;
+	padding: 32px 45px 25px;
+	.weixin_bind_ma{
+		display: block;
+		width: 150px;
+		height: 150px;
+		border: 1px solid #e5e5e5;
+		padding: 6px;
+		margin: 0 auto;
+		img{
+			display: block;
+			width: 136px;
+			height: 136px;
+		}
+	}
+	.weixin_bind_wz{
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		color: #333;
+		line-height: 24px;
+		padding-top: 10px;
+	}
+}
+.bindsuccess_layer{
+	@include common_layerbox(300px);
+	padding: 40px 30px 50px;
+	.bindsuccess_icon{
+		display: block;
+		width: 50px;
+		height: 50px;
+		border: 2px solid #7bd45a;
+		border-radius: 50%;
+		text-align: center;
+		margin: 0 auto;
+		&:before{
+			@include inlineblock();
+			content: "";
+			width: 26px;
+			height: 22px;
+			background: url("../images/icon-sprite01.png") no-repeat -396px -1px;
+			margin-top: 14px;
+		}
+	}
+	.bindsuccess_wz{
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		color: #333;
+		padding-top: 20px;
+	}
+}
+.pt30{
+	padding-top: 30px;
+}
+.pb150{
+	padding-bottom: 150px;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/personalinfo.css" rel="stylesheet">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=vlekTRkniIsZPlcIeGeeAN2qxZrlxACD&amp;services=&amp;t=20170725120922"></script>
+</head>
+<body class="body_bg02">
+  <% include common/memberheader.html %>
+  <section>
+    <div class="center_wrap">
+      <% include common/memberaside.html %>
+      <div class="center_main">
+        <div class="main_con_wrap">
+	        <h3 class="common_label01">个人资料</h3>
+	        <div class="getscore_con clearfix">
+            <div class="personalinfo_lf">
+	            <div class="topinfo_progress_wrap">
+		            <p class="topinfo_progress_value">个人资料完善度<em>30%</em></p>
+		            <div class="topinfo_progress_bar">
+			            <div></div>
+		            </div>
+		            <p class="topinfo_progress_notice">完善资料100%奖励：<em>50派币</em></p>
+	            </div>
+              <div class="personalinfo_item">
+	              <span class="personalinfo_label">用户名：</span>
+	              <p class="personalinfo_name">张三</p>
+              </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">用户昵称：</span>
+		            <input type="text" class="common_txt nikename_txt">
+	            </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">性别：</span>
+		            <div class="sex_wrap">
+			            <span><i class="active"></i>保密</span>
+			            <span><i></i>男</span>
+			            <span><i></i>女</span>
+		            </div>
+	            </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">手机号码：</span>
+		            <div class="personalinfo_cont">
+			            <span class="bindedphone">已绑定 18676044518</span>
+			            <a href="/user/safe/phone" class="bindagain_link">重新绑定</a>
+		            </div>
+	            </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">现居住地：</span>
+		            <div class="personalinfo_cont">
+			            <div class="dropdown_wrap_city mr5">
+				            <div class="dropdown_link_city">
+					            <span class="dropdownsel">请选择省份</span>
+					            <span class="dropdownicon"></span>
+				            </div>
+				            <ul class="dropdown_menu_city">
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+					            <li><a href="javascript:;">某某省</a></li>
+				            </ul>
+			            </div>
+			            <div class="dropdown_wrap_city">
+				            <div class="dropdown_link_city">
+					            <span class="dropdownsel">请选择城市</span>
+					            <span class="dropdownicon"></span>
+				            </div>
+				            <ul class="dropdown_menu_city">
+					            <li><a href="javascript:;">某某城市</a></li>
+					            <li><a href="javascript:;">某某城市</a></li>
+					            <li><a href="javascript:;">某某城市</a></li>
+					            <li><a href="javascript:;">某某城市</a></li>
+				            </ul>
+			            </div>
+			            <input type="text" class="common_txt detailadress_txt" placeholder="详细地址">
+		            </div>
+	            </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">位置标注：</span>
+		            <div class="personalinfo_cont">
+			            <div class="lat_area">经度，维度</div>
+			            <span class="lat_link">标注当前位置</span>
+	              </div>
+		          </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">擅长领域：</span>
+		            <div class="personalinfo_cont">
+			            <div class="tags_wrap">
+				            <div class="tags_box">
+					            <span>AutoCAD</span>
+					            <a href="javascript:;">×</a>
+				            </div>
+				            <div class="tags_box">
+					            <span>AutoCAD</span>
+					            <a href="javascript:;">×</a>
+				            </div>
+			            </div>
+			            <div class="skills_wrap">
+				            <span>人物设计</span>
+				            <span>动物植物</span>
+				            <span>机械军火</span>
+				            <span>场景设计</span>
+				            <span>场景设计</span>
+			            </div>
+		            </div>
+	            </div>
+	            <div class="personalinfo_item">
+		            <span class="personalinfo_label">个人说明：</span>
+		            <textarea class="common_txt personalinfo_intro_area" placeholder="简短的描述自己"></textarea>
+	            </div>
+	            <div class="submit_wrap">
+		            <a href="#" class="save_btn">保存</a>
+	            </div>
+	          </div>
+            <div class="personalinfo_rh">
+	            <span class="personal_pic"><img src="images/person_default.jpg" alt="" title=""></span>
+	            <a href="#" class="personalpic_btn">修改头像</a>
+	            <p class="pic_format">
+		            格式：jpg, png, bmp<br>
+		            尺寸：推荐大于 140 x 140 的正方形</p>
+            </div>
+	        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% include common/mainfooter.html %>
+
+  <div class="common_mask" id="markarea_layer">
+	  <div class="markarea_layer">
+		  <a href="javascript:;" class="close_icon"></a>
+		  <h3 class="commonlayer_tit">坐标标注</h3>
+      <div class="map_box" id="map"></div>
+      <p class="location_show">定位坐标：&nbsp;&nbsp; 经度：<span id="lng">1.0235</span>&nbsp;&nbsp;&nbsp;&nbsp; 纬度：<span id="lat">1.2394</span></p>
+      <a href="#" class="mapsubmit_btn">提交</a>
+	  </div>
+  </div>
+
+  <div class="common_mask" id="editepic_layer">
+	  <div class="editepic_layer">
+		  <a href="javascript:;" class="close_icon"></a>
+		  <h3 class="commonlayer_tit">坐标标注</h3>
+		  <div class="cut-wrap clearfix" id="jcropdiv">
+			  <div class="wl">
+				  <div class="jc-demo-box" data="0">
+					  <div id="target" class="jcrop_w" >
+						  <img src="images/index_album.jpg" width="602" height="400" />
+					  </div>
+				  </div>
+				  <div class="jy-up-ch">
+					  <a id="idLeft" href=""><i class="bch bch1"></i>向左旋转</a>
+					  <a id="idSmall" href="" class="bch bch2"> </a>
+					  <a id="idBig" href="" class="bch bch3"> </a>
+					  <a id="idRight" href="" ><i class="bch bch4"></i>向右旋转</a>
+					  <div class="uppic-again">
+						  <a href="javascript:;" id="uppersonpic">
+						     <input type='file'>重新上传
+						  </a>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="wr" id="preview-pane">
+				  <div class="preview-container">
+					  <p class="up-notice">您上传的头像会自动生成三种尺寸，<br>
+						  请注意小尺寸的头像是否清晰。</p>
+					  <div class="clearfix">
+						  <div class="preview-wrap preview-wrap01">
+							  <div class="pre-1">
+								  <img src="images/index_album.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+							  </div>
+							  <p class="preview-intro preview-intro01">大尺寸头像，140*140像素</p>
+						  </div>
+						  <div class="preview-wrap preview-wrap02">
+							  <div class="pre-2">
+								  <img src="images/index_album.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+							  </div>
+							  <p class="preview-intro preview-intro02">中尺寸头像70*70像素<br>（自动生成）</p>
+							  <div class="clearfix"></div>
+							  <div class="pre-3">
+								  <img src="images/index_album.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+							  </div>
+							  <p class="preview-intro preview-intro03">小尺寸头像26*26像素<br>（自动生成）</p>
+						  </div>
+					  </div>
+					  <div class="piccut-submit"><a href="#">提交</a> </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+  <script type="text/javascript" src="/scripts/lib/require.js" data-main="/scripts/personalinfo"></script>
+</body>
+</html>

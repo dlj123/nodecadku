@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+  <style>
+	  input{
+		  outline: none;
+		  height: 36px;
+		  padding: 0 10px;
+	  }
+  </style>
+</head>
+<body>
+<div class="tab_list" style="display: block">
+	<input type="text" class="focus common-txt index-demand" placeholder="您的需求">
+	<input type="text" class="focus common-txt index-phone" placeholder="您的手机号">
+	<textarea class="focus common-txt demand-intro" placeholder="您的需求简述"></textarea>
+	<button class="design-submit">立即提交</button>
+	<p class="write-notice"><em>*</em>打印派将严格保护您的隐私，请放心填写</p>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script> -->
+	<!-- var value = $('.common-txt').attr('placeholder');
+	
+	$('.common-txt').val(value).css({'color':'#999','border':'1px solid #e5e5e5'});
+	
+	$('.common-txt').focus(function(){
+	
+		$(this).css({'border':'1px solid #00b358','color':'#333'}).val("");
+	
+	}).blur(function(){
+	
+		if((typeof($(this).attr('placeholder')) !== undefined) && ($(this).val() ==''))
+		{
+			$(this).val($(this).attr('placeholder')).css({'border':'1px solid #dddddd','color':'#999'});
+		}
+	  else if($(this).val() !== ''){
+			$(this).css({'border':'1px solid #dddddd','color':'#333'})
+		}
+	});
+	var arr = [ '100px', 'abc'-6, [], -98765, 34, -2, 0, '300', , function(){alert(1);}, null, document, [], '200px'-30,'23.45元', 5, Number('abc'), function(){ alert(3); }, 'xyz'-90 ];
+	
+	var arrnum=[];
+	
+	var arrnum02=[];
+	
+	
+	for(var i =0;i<arr.length;i++){
+	
+		   if((!isNaN(arr[i]))&&(typeof(arr[i])=='number')){
+	
+	            arrnum.push(i);
+		   }
+	}
+	console.log(arrnum);
+	
+	
+	
+	</script>
+	</body>
+	</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+$path = "zan.txt";
+if(isset($_POST['zan'])){
+$num = (int)$_POST['zan'];
+$save = fopen($path,"w");
+fwrite($save,$num);
+fclose($save);
+echo "good";
+exit();
+}
+$zan = file_exists($path) ? intval(file_get_contents($path)) : 0;
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我要点赞</title>
+<style>
+.main { position: relative; font-size: 10pt; line-height: 18px; margin: 40px auto; width: 800px; height: 170px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+.zan { position: absolute; top: 20%; left: 45%; width: 160px; height: 110px; background: url("zan.jpg") center no-repeat; cursor: pointer; opacity: 0.85; }
+.zan:active { opacity: 1; }
+.zan em { position: absolute; color: #333; font-style: normal; bottom: -15px; width: 100%; text-align: center; }
+.zan i { font-style: normal; color: #E94F06; }
+.zan b { position: absolute; color: #E94F06; font-style: normal; bottom: -15px; width: 100%; text-align: center; }
+</style>
+</head>
+<body>
+<div class="main">
+<div class="zan"><em>看官们给了 <i><?php echo $zan; ?></i> 个赞</em></div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+$(".zan").click(function(e){
+var $i=$(".zan i"), $b=$("<b>").text("+1"), n=parseInt($i.text());
+$b.css({
+"bottom":0,
+"z-index":999,
+});
+$i.text(n+1);
+$(".zan").append($b);
+$b.animate({"bottom":100,"opacity":0},1000,function(){$b.remove();});
+var d = setInterval(function(){
+clearInterval(d);
+if($(".zan b").length == 1){
+$.post("",{zan:$i.text()})
+}
+},1000)
+e.stopPropagation();
+});
+});
+</script>
+</body>
+</html>

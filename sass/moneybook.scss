@@ -1,0 +1,509 @@
+@import "reset.scss";
+@import "common.scss";
+@import "widget/jquery-ui";
+.currency_menu{
+	width: 880px;
+	padding:30px 0 50px;
+	@extend %clearfix;
+}
+.currency_menu_list{
+	li{
+		padding:14px 0 14px 0;
+		overflow:hidden;
+		border-right:1px solid #e5e5e5;
+		float:left;
+		text-align:center;
+		width:33.33%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		&.last-currency{
+			border-right:0;
+		}
+		span{
+			font-size:16px;
+			color:#333;
+			font-weight: bold;
+		}
+		p{
+			font-size:14px;
+			color:#333;
+			margin:16px 0;
+			strong{
+				font-size:16px;
+				color:#db2b22;
+				font-weight:bold;
+			}
+		}
+		button{
+			@include btn01(160px,40px,#db2b22,14px);
+			display:block;
+			margin:0 auto;
+			border: 0;
+			outline: none;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		.capital_cash_active{
+			background:#999;
+		}
+		em{
+			width:190px;
+			display:block;
+			line-height:20px;
+			color:#999;
+			margin:0 auto;
+		}
+	}
+
+}
+
+.capital_cash_list{
+    width: 880px;
+	padding:0 0 30px;
+
+	h5{
+		width: 100%;
+		line-height:44px;
+		color:#333;
+	}
+}
+.capital_cash_tb{
+    .col01{
+		width: 220px;
+	}
+	.col02{
+		width: 145px;
+	}
+	.col03{
+		width: 145px;
+	}
+	.col04{
+		width: 225px;
+	}
+	.col05{
+		width: 145px;
+	}
+}
+.capital_cash_tb,.transaction_tb,.recharge_tb,.cashrecord_tb,.freeze_tb{
+	width: 880px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+.capital_cash_tb thead th,.transaction_tb thead th,.recharge_tb thead th,.cashrecord_tb thead th,.freeze_tb thead th{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #f4f4f4;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+.capital_cash_tb tbody td,.transaction_tb tbody td,.recharge_tb tbody td,.cashrecord_tb tbody td,.freeze_tb tbody td{
+   padding: 18px 10px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+}
+.capital_cash_tb tbody td.state01,.transaction_tb tbody td.state01,.recharge_tb tbody td.state01,
+.cashrecord_tb tbody td.state01,.freeze_tb tbody td.state01{
+	color: #db2b22;
+}
+.capital_cash_tb tbody td.state02,.transaction_tb tbody td.state02,.recharge_tb tbody td.state02,
+.cashrecord_tb tbody td.state02,.freeze_tb tbody td.state02{
+	color: #666;
+}
+.acountchange_layer{
+	@include common_layerbox(700px);
+	top: 200px;
+}
+.paymx_confirm{
+	width: 100%;
+	padding-bottom: 35px;
+	text-align: right;
+	.pay_btn{
+		@include btn01(120px,40px,#db2b22,16px);
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	.payno_btn{
+		@include btn01(120px,40px,#ccc,16px);
+		cursor: not-allowed;
+	}
+}
+.paytab{
+	width: 100%;
+	font-size: 0;
+	a{
+		@include inlineblock(top);
+		width: 100px;
+		height: 31px;
+		border-bottom: 1px solid #db2b22;
+		line-height: 31px;
+		text-align: center;
+		font-size: 14px;
+		color: #333;
+		background: #fff;
+	}
+	a.active{
+		background: #db2b22;
+		color: #fff;
+	}
+}
+.paymode{
+	display: none;
+}
+.paymode_lb{
+	width: 715px;
+	padding: 30px 0 35px;
+	@extend %clearfix;
+	li{
+		@extend %fl;
+		margin-right: 20px;
+		font-size: 0;
+		i,span{
+			@include inlineblock();
+		}
+		i{
+			background: url("../images/icon-sprite01.png") no-repeat;
+			width: 14px;
+			height: 14px;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+		span{
+			width: 120px;
+			height: 46px;
+			border: 1px solid #e5e5e5;
+			text-align: center;
+			cursor: pointer;
+		}
+		img{
+			@include inlineblock();
+			margin-top: 5px;
+		}
+	}
+	li i{
+		background-position: -118px -24px;
+	}
+	li.active i{
+		background-position: -137px -24px;
+	}
+	li.active span{
+		border: 1px solid #db2b22;
+	}
+}
+.pay_extra{
+	width: 100%;
+	padding: 30px 0 45px;
+	font-size: 16px;
+	color: #555;
+	line-height: 36px;
+	em{
+		color: #db2b22;
+		margin: 0 5px;
+	}
+}
+.extrapay_txt{
+	@include txt01(198px,36px,#e5e5e5);
+	background: #f4f4f4;
+	margin: 0 15px 0 30px;
+}
+.setpaypwd_link{
+	font-size: 14px;
+	color: #db2b22;
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
+}
+.pay_extrano{
+	width: 100%;
+	padding: 30px 0 50px;
+	font-size: 16px;
+	color: #555;
+	em{
+		color: #db2b22;
+		font-weight: bold;
+	}
+}
+.accoutpay_con{
+	width: 700px;
+	padding:45px 30px 0 55px;
+}
+.currency_money_num{
+	font-size:14px;
+	color:#333;
+	input,span{
+		@include inlineblock();
+	}
+	input{
+		color:#333;
+		font-size:12px;
+		width:223px;
+		padding:9px 0 9px 15px;
+		border:1px solid #e5e5e5;
+		margin-right: 10px;
+	}
+	span{
+		width: 80px;
+		text-align: left;
+		font-size:16px;
+		color:#333;
+		font-weight: bold;
+		strong{
+			color:#00b358;
+		}
+	}
+}
+.currency_money_tips{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #db2b22;
+	padding-bottom: 50px;
+	padding-top: 10px;
+	line-height: 1;
+	padding-left: 80px;
+}
+.getcash_layer{
+	@include common_layerbox(560px);
+	top: 120px;
+}
+
+.cash_popup_cont{
+	width: 560px;
+	padding:32px 70px 50px 40px;
+}
+.cash_popup_tips02{
+	width: 100%;
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 30px;
+	line-height: 1;
+	a{
+		font-size: 14px;
+		color: #db2b22;
+		margin-left: 5px;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.cash_form{
+	overflow: hidden;
+	margin-bottom:28px;
+	label{
+		display: block;
+		text-align: right;
+		float:left;
+		width: 100px;
+		line-height: 36px;
+		font-size:14px;
+		color:#333;
+		font-weight:bold;
+		padding-right: 10px;
+
+	}
+	span{
+		font-size:16px;
+		color:#333;
+		float:left;
+		line-height:36px;
+	}
+	input{
+		width:350px;
+		font-size:12px;
+		height: 36px;
+		line-height: 34px;
+		padding: 0 10px;
+		border:1px solid #ccc;
+
+	}
+	.cash_from_msg{
+
+		width:225px;
+	}
+	.cash_form_btn{
+		@include btn01(120px,36px,#db2b22,14px);
+		border: 0;
+		outline: none;
+		float:right;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	.cash_form_btned{
+      background:#888;
+      cursor:not-allowed;
+      	&:hover{
+			opacity: 1;
+		}
+	}
+}
+.cash_form_info{
+	float:left;
+	width: 350px;
+	p{
+		color:#999;
+		margin-top:5px;
+		font-size: 12px;
+	}
+}
+.cash_submit{
+	padding-top:20px;
+
+	text-align:center;
+	button{
+		@include btn01(120px,36px,#db2b22,14px);
+		border: 0;
+		outline: none;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+
+
+.scoredetail_filter{
+	width: 880px;
+	margin-bottom: 20px;
+	padding-top: 25px;
+	@extend %clearfix;
+	.scoredetail_menu{
+		@extend %fl;
+	}
+	.scoredetail_condition{
+		@extend %fr;
+	}
+}
+.scoredetail_menu{
+	li{
+		@extend %fl;
+		margin-right: 30px;
+		a{
+			font-size: 14px;
+			color: #333;
+			font-weight: bold;
+			display: block;
+			padding-bottom: 10px;
+			border-bottom: 2px solid transparent;
+			&:hover{
+				color: #db2b22;
+			}
+		}
+	}
+	li.active a{
+		color: #db2b22;
+		border-bottom: 2px solid #db2b22;
+	}
+}
+.scoredetail_condition{
+	font-size: 14px;
+	color: #333;
+	white-space: nowrap;
+}
+.score_txt{
+	@include txt01(100px,30px,#e5e5e5);
+	margin: 0 10px;
+}
+.condition_sear_btn{
+	@include btn01(60px,30px,#db2b22,14px);
+	margin-right: 20px;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.dropdown_wrap_time{
+	@include dropdownwrap(110px,30px);
+	@include inlineblock();
+}
+.dropdown_link_time{
+	@include dropdownlink(110px,30px,10px);
+}
+.dropdown_menu_time{
+	@extend %dropdownmenu;
+}
+
+
+.transaction_tb{
+	.col01{
+		width: 70px;
+	}
+	.col02{
+		width: 180px; ;
+	}
+	.col03{
+		width: 220px;
+	}
+	.col04{
+		width: 115px;
+	}
+	.col05{
+		width: 180px;
+	}
+	.col06{
+		width: 115px;
+	}
+}
+.acountdetail_con{
+	display: none;
+}
+.recharge_tb{
+	.col01{
+		width: 70px;
+	}
+	.col02{
+		width: 200px;
+	}
+	.col03{
+		width: 120px;
+	}
+	.col04{
+		width: 340px;
+	}
+	.col05{
+		width: 150px;
+	}
+}
+.cashrecord_tb{
+	.col01{
+		width: 70px;
+	}
+	.col02{
+		width: 200px;
+	}
+	.col03{
+		width: 120px;
+	}
+	.col04{
+		width: 120px;
+	}
+	.col05{
+		width: 210px;
+	}
+	.col06{
+		width: 160px;
+	}
+}
+.freeze_tb{
+	.col01{
+		width: 70px;
+	}
+	.col02{
+		width: 300px;
+	}
+	.col03{
+		width: 220px;
+	}
+	.col04{
+		width: 290px;
+	}
+}

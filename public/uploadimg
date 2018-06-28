@@ -1,0 +1,81 @@
+var uploader = webuploader.create({
+
+					auto: true, // 选完文件后，是否自动上传
+
+					//swf: 'js/widget/Uploader.swf', // swf文件路径
+
+					//server: 'http://192.168.0.21/web_buge/index.php/Home/Index/uploadFiles', // 文件接收服务端
+
+					pick: '#upimgbtn', // 选择文件的按钮。可选
+
+					// 只允许选择图片文件。
+
+					accept: {
+
+						title: 'Images',
+
+						extensions: 'gif,jpg,jpeg,bmp,png',
+
+						mimeTypes: 'images/*'
+
+					}
+				});
+				// 文件上传过程中创建进度条实时显示。
+				uploader.on( 'fileQueued', function( file ) {
+
+					var $list = $("#imgList"), //获取文件列表
+
+						$li = $(
+
+							'<dl class="uppic_item" id="'+file.id + '"><dt>'+
+
+							'<img src="images/index_album.jpg" alt="" title=""></dt><dd>'+
+
+						    '<h5>'+file.name+'</h5><div class="progress"><div style="width:0%"></div></div><div class="moren_wrap"><span class="setmoren">设为默认</span></div></dd><a href="javascript:;" class="updel_icon"></a></dl>'
+
+						),
+						$img = $li.find('img');
+
+					$list.append( $li ); // $list为容器jQuery实例
+
+					// 创建缩略图
+					uploader.makeThumb( file, function( error, src ) {
+
+						if ( error ) {
+
+							$img.replaceWith('<span>不能预览</span>');
+
+							return;
+						}
+						$img.attr( 'src', src );//设置预览图
+
+					}, thumbnailWidth, thumbnailHeight ); //100x100为缩略图尺寸
+				});
+
+				// 文件上传过程中创建进度条实时显示。
+				
+				uploader.on( 'uploadProgress', function( file, percentage ) {
+
+					var $li = $( '#'+file.id ),
+
+						$percent = $li.find('.progress div');
+
+					//避免重复创建
+					if ( !$percent.length ) {
+
+						$li.find('h5').after('<div class="progress"><div style="width:0%"></div></div>');
+
+						$percent = $li.find('.progress>div');
+					}
+
+					$percent.css( 'width', percentage * 100 + '%' );
+
+					
+				});
+
+
+				uploader.on( 'uploadComplete', function( file ) {
+
+                  $( '#'+file.id ).find('.progress').remove();
+
+               });

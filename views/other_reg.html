@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/lg_reg.css" rel="stylesheet">
+</head>
+<body class="body_bg02">
+  <% include common/mainheader.html %>
+  <section>
+    <div class="otherlgreg_wrap">
+        <p class="otherlgreg_info">欢迎你！<em>奋斗的可乐</em>，完善以下信息，以后你也可以使用该邮箱和密码来登录CADKU。</p>
+	      <div class="otherlg_con">
+          <div class="otherlg_lf">
+	          <span>微博账号</span>
+	          <img src="images/perpic.jpg" alt="" title="">
+	          <p>奋斗的可乐</p>
+          </div>
+		      <div class="otherlg_rh">
+            <p class="otherlg_label">已有账号，<a href="#">立即绑定</a></p>
+			      <div class="edite_item">
+				      <span class="edite_label user"></span>
+				      <input type="text" class="edite_txt" placeholder="用户名/邮箱">
+			      </div>
+			      <div class="edite_item">
+				      <span class="edite_label email"></span>
+				      <input type="email" class="edite_txt" placeholder="电子邮箱">
+			      </div>
+			      <div class="edite_item">
+				      <span class="edite_label pwd"></span>
+				      <input type="text" class="edite_txt" placeholder="输入密码">
+			      </div>
+			      <div class="edite_item">
+				      <span class="edite_label pwd"></span>
+				      <input type="text" class="edite_txt" placeholder="确认密码">
+			      </div>
+			      <div class="yzm_item">
+				      <input type="text" class="edite_yzm" placeholder="验证码">
+				      <img src="images/yzm01.jpg" alt="" title="">
+				      <a href="javascript:;" class="change_btn">换一张</a>
+			      </div>
+			      <div class="reg_protocol">
+				      <input type="checkbox" class="selprotocol">我已经阅读并同意<a href="#">《CADKU服务条款》</a>
+			      </div>
+			      <p class="error_notice">邮箱格式错误，请重新输入</p>
+			      <a href="#" class="lgreg_btn">立即注册</a>
+		      </div>
+	      </div>
+    </div>
+  </section>
+  <% include common/mainfooter.html %>
+<script type="text/javascript" src="/scripts/lib/require.js" data-main="/scripts/lg_reg"></script>
+</body>
+</html>

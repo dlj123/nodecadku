@@ -1,0 +1,168 @@
+@import "reset.scss";
+@import "common.scss";
+.center_mx{
+	width: 880px;
+	margin-top: 10px;
+	.concelzan{
+		@include btn01(90px,32px,#db2b22,14px);
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: none;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.center_album{
+	width: 880px;
+	margin-top: 30px;
+	.concelorder{
+		@include btn01(90px,32px,#db2b22,14px);
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: none;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.center_album li:nth-of-type(4n),.center_mx li:nth-of-type(4n){
+	margin-right: 20px;
+}
+.center_album li:nth-of-type(3n),.center_mx li:nth-of-type(3n){
+	margin-right: 0;
+}
+
+.designerlist_item{
+	width: 860px;
+	padding: 30px 0;
+	border-bottom: 1px solid #e5e5e5;
+	@extend %clearfix;
+	dt,dd{
+		width: 100%;
+	}
+	dt{
+		margin-bottom: 20px;
+		@include justify(100%);
+	}
+	dd{
+		float: left;
+	}
+	.designer_top,.designer_concern,.designer_concerned{
+		@include inlineblock();
+	}
+	.designer_concern{
+		@include btn01(90px,32px,#db2b22,14px);
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	.designer_concerned{
+		@include btn01(90px,32px,#fff,14px);
+		color: #db2b22;
+		border: 1px solid #db2b22;
+		line-height: 30px;
+	}
+	.designer_top{
+		font-size: 0;
+	}
+	.designer_pic,.designer_intro{
+		@include inlineblock();
+	}
+}
+.designerlist_item:last-of-type{
+	border-bottom: 0;
+}
+.designer_pic{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	margin-right: 12px;
+	img{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		@include inlineblock(top);
+	}
+}
+.designer_intro{
+	max-width: 540px;
+	h6{
+		width: 100%;
+		font-size: 18px;
+		color: #333;
+		padding-bottom: 15px;
+		line-height: 1;
+		font-weight: bold;
+		span{
+			@include inlineblock();
+			height: 20px;
+			line-height: 20px;
+			border-radius: 10px;
+			background: #fec006;
+			font-size: 14px;
+			color: #fff;
+			padding: 0 10px;
+			margin-left: 10px;
+			font-weight: normal;
+		}
+	}
+	.designer_name_link:hover h6{
+		color: #db2b22;
+	}
+	p{
+		width: 100%;
+		font-size: 14px;
+		color: #999;
+		line-height: 22px;
+		margin-bottom: 5px;
+		em{
+			color: #000;
+			margin-left: 8px;
+		}
+	}
+}
+.designer_mx{
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-left: 20px;
+	overflow: hidden;
+	img{
+		width: 200px;
+		height: 150px;
+		@extend %transition;
+	}
+	a:hover img{
+		@extend %scale11;
+	}
+}
+.designer_mx:first-of-type{
+	margin-left: 0;
+}
+.pt15{
+	padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+.mt30{
+	margin-top: 30px;
+}
+.mt20{
+	margin-top: 20px;
+}
+.mt40{
+	margin-top: 40px;
+}

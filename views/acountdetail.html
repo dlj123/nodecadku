@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg,chrome=1">
+	<title>cadku-lgreg</title>
+	<link type="text/css" href="/styles/moneybook.css" rel="stylesheet">
+</head>
+<body class="body_bg02">
+  <% include common/memberheader.html %>
+  <section>
+    <div class="center_wrap">
+      <% include common/memberaside.html %>
+      <div class="center_main">
+        <div class="main_con_wrap">
+	        <h3 class="common_label01">账户明细</h3>
+	        <div class="getscore_con">
+		        <div class="scoredetail_filter">
+			        <ul class="scoredetail_menu">
+				        <li class="active"><a href="#">交易记录</a></li>
+				        <li><a href="#">充值记录</a></li>
+				        <li><a href="#">提现记录</a></li>
+				        <li><a href="#">冻结记录</a></li>
+			        </ul>
+			        <div class="scoredetail_condition">
+				        <input type="text" class="common_txt score_txt">到
+				        <input type="text" class="common_txt score_txt">
+				        <a href="#" class="condition_sear_btn">查询</a>选择时间：
+				        <div class="dropdown_wrap_time">
+					        <div class="dropdown_link_time">
+						        <span class="dropdownsel">今天</span>
+						        <span class="dropdownicon"></span>
+					        </div>
+					        <ul class="dropdown_menu_time">
+						        <li><a href="javascript:;">今天</a></li>
+						        <li><a href="javascript:;">明天</a></li>
+						        <li><a href="javascript:;">三天前</a></li>
+					        </ul>
+				        </div>
+			        </div>
+		        </div>
+		        <div class="acountdetail_con" style="display: block;">
+
+			        <table cellpadding="0" cellspacing="0" class="transaction_tb">
+				        <colgroup>
+					        <col class="col01">
+					        <col class="col02">
+					        <col class="col03">
+					        <col class="col04">
+					        <col class="col05">
+					        <col class="col06">
+				        </colgroup>
+				        <thead>
+				        <tr>
+					        <th>编号</th>
+					        <th>流水号</th>
+					        <th>交易内容</th>
+					        <th>收/支金额</th>
+					        <th>时间</th>
+					        <th>处理状态</th>
+				        </tr>
+				        </thead>
+				        <tbody>
+				        <tr>
+					        <td>1</td>
+					        <td>11492417091964022</td>
+					        <td>收到模型王者荣耀角色集</td>
+					        <td>+80.00</td>
+					        <td>2017-4-19&nbsp;&nbsp;10:43:21</td>
+					        <td class="state01">处理中</td>
+				        </tr>
+				        <tr>
+					        <td>1</td>
+					        <td>11492417091964022</td>
+					        <td>收到模型王者荣耀角色集</td>
+					        <td>+80.00</td>
+					        <td>2017-4-19 &nbsp;&nbsp;10:43:21</td>
+					        <td class="state01">（退回）账号有误</td>
+				        </tr>
+				        <tr>
+					        <td>1</td>
+					        <td>11492417091964022</td>
+					        <td>收到模型王者荣耀角色集</td>
+					        <td>+80.00</td>
+					        <td>2017-4-19 &nbsp;&nbsp; 10:43:21</td>
+					        <td class="state02">成功</td>
+				        </tr>
+				        </tbody>
+			        </table>
+			        <div class="pagination">
+				        <a href="#">上一页</a>
+				        <a href="#" class="active">1</a>
+				        <a href="#">2</a>
+				        <a href="#">3</a>
+				        <a href="#">4</a>
+				        <a href="#">5</a>
+				        <span>...</span>
+				        <a href="#">下一页</a>
+				        <a href="#">尾页</a>
+				        <span>共 20 页，到第</span>
+				        <input type="text" class="common_txt jumppage_txt">
+				        <span>页</span>
+				        <a href="#">确定</a>
+			        </div>
+		        </div>
+		        <div class="acountdetail_con">
+
+			        <table cellpadding="0" cellspacing="0" class="recharge_tb">
+				        <colgroup>
+					        <col class="col01">
+					        <col class="col02">
+					        <col class="col03">
+					        <col class="col04">
+					        <col class="col05">
+				        </colgroup>
+				        <thead>
+				        <tr>
+					        <th>编号</th>
+					        <th>时间</th>
+					        <th>交易金额</th>
+					        <th>打款账号</th>
+					        <th>处理状态</th>
+				        </tr>
+				        </thead>
+				        <tbody>
+				        <tr>
+					        <td>1</td>
+					        <td>2017-4-19&nbsp;&nbsp;10:43:21</td>
+					        <td>+80.00</td>
+					        <td>微信11492417091964022</td>
+					        <td class="state01">处理中</td>
+				        </tr>
+				        <tr>
+					        <td>1</td>
+					        <td>2017-4-19&nbsp;&nbsp;10:43:21</td>
+					        <td>+80.00</td>
+					        <td>微信11492417091964022</td>
+					        <td class="state01">处理中</td>
+				        </tr>
+				        <tr>
+					        <td>1</td>
+					        <td>2017-4-19&nbsp;&nbsp;10:43:21</td>
+					        <td>+80.00</td>
+					        <td>微信11492417091964022微信11492417091964022微信11492417091964022</td>
+					        <td class="state02">处理中</td>
+				        </tr>
+				        </tbody>
+			        </table>
+			        <div class="pagination">
+				        <a href="#">上一页</a>
+				        <a href="#" class="active">1</a>
+				        <a href="#">2</a>
+				        <a href="#">3</a>
+				        <a href="#">4</a>
+				        <a href="#">5</a>
+				        <span>...</span>
+				        <a href="#">下一页</a>
+				        <a href="#">尾页</a>
+				        <span>共 20 页，到第</span>
+				        <input type="text" class="common_txt jumppage_txt">
+				        <span>页</span>
+				        <a href="#">确定</a>
+			        </div>
+		        </div>
+        </div>
+
+	        <div class="acountdetail_con">
+
+		        <table cellpadding="0" cellspacing="0" class="cashrecord_tb">
+			        <colgroup>
+				        <col class="col01">
+				        <col class="col02">
+				        <col class="col03">
+				        <col class="col04">
+				        <col class="col05">
+				        <col class="col06">
+			        </colgroup>
+			        <thead>
+			        <tr>
+				        <th>编号</th>
+				        <th>申请时间</th>
+				        <th>提现金额</th>
+				        <th>收款人</th>
+				        <th>支付宝账号</th>
+				        <th>处理状态</th>
+			        </tr>
+			        </thead>
+			        <tbody>
+			        <tr>
+				        <td>1</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+				        <td>+80.00</td>
+				        <td>付万德</td>
+				        <td>56238594@qq.com</td>
+				        <td class="state01">处理中</td>
+			        </tr>
+			        <tr>
+				        <td>1</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+				        <td>+80.00</td>
+				        <td>付万德</td>
+				        <td>56238594@qq.com</td>
+				        <td class="state01">处理中</td>
+			        </tr>
+			        <tr>
+				        <td>1</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+				        <td>+80.00</td>
+				        <td>付万德</td>
+				        <td>56238594@qq.com</td>
+				        <td class="state01">处理中</td>
+			        </tr>
+			        </tbody>
+		        </table>
+		        <div class="pagination">
+			        <a href="#">上一页</a>
+			        <a href="#" class="active">1</a>
+			        <a href="#">2</a>
+			        <a href="#">3</a>
+			        <a href="#">4</a>
+			        <a href="#">5</a>
+			        <span>...</span>
+			        <a href="#">下一页</a>
+			        <a href="#">尾页</a>
+			        <span>共 20 页，到第</span>
+			        <input type="text" class="common_txt jumppage_txt">
+			        <span>页</span>
+			        <a href="#">确定</a>
+		        </div>
+	        </div>
+	        <div class="acountdetail_con">
+
+		        <table cellpadding="0" cellspacing="0" class="freeze_tb">
+			        <colgroup>
+				        <col class="col01">
+				        <col class="col02">
+				        <col class="col03">
+				        <col class="col04">
+			        </colgroup>
+			        <thead>
+			        <tr>
+				        <th>编号</th>
+				        <th>流水号</th>
+				        <th>金额</th>
+				        <th>预计到账时间</th>
+			        </tr>
+			        </thead>
+			        <tbody>
+			        <tr>
+				        <td>1</td>
+				        <td>11111555555555</td>
+				        <td>+80.00</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+			        </tr>
+			        <tr>
+				        <td>1</td>
+				        <td>11111555555555</td>
+				        <td>+80.00</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+			        </tr>
+			        <tr>
+				        <td>1</td>
+				        <td>11111555555555</td>
+				        <td>+80.00</td>
+				        <td>2017-4-19&nbsp;&nbsp; 10:43:21</td>
+			        </tr>
+			        </tbody>
+		        </table>
+		        <div class="pagination">
+			        <a href="#">上一页</a>
+			        <a href="#" class="active">1</a>
+			        <a href="#">2</a>
+			        <a href="#">3</a>
+			        <a href="#">4</a>
+			        <a href="#">5</a>
+			        <span>...</span>
+			        <a href="#">下一页</a>
+			        <a href="#">尾页</a>
+			        <span>共 20 页，到第</span>
+			        <input type="text" class="common_txt jumppage_txt">
+			        <span>页</span>
+			        <a href="#">确定</a>
+		        </div>
+	        </div>
+      </div>
+    </div>
+	</div>
+  </section>
+  <% include common/mainfooter.html %>
+<script type="text/javascript" src="/scripts/lib/require.js" data-main="/scripts/moneybook"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+@import "reset.scss";
+@import "common.scss";
+.maincon_top{
+	@extend %wraper;
+	margin-top: 20px;
+	@extend %clearfix;
+}
+.index_mxtype,.index_banner,.index_state{
+	float:left;
+	height: 360px;
+}
+.index_mxtype{
+	width: 240px;
+	background: #333;
+	padding: 30px 20px;
+}
+.index_banner{
+	width: 660px;
+	margin: 0 10px;
+	position: relative;
+	overflow: hidden;
+}
+.index_state{
+	width: 260px;
+	border: 1px solid #e5e5e5;
+}
+.index_mxtype_label{
+	width: 100%;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+.index_mxtype_lb{
+	width: 200px;
+	@extend %clearfix;
+	li{
+		width: 100px;
+		@extend %fl;
+		line-height: 1;
+		a{
+			@include inlineblock(top);
+			width: 100%;
+			font-size: 14px;
+			color: #fff;
+			padding-bottom: 20px;
+			&:hover{
+				color: #cc3333;
+			}
+		}
+	}
+	li:nth-of-type(2n+1){
+		padding-right: 15px;
+	}
+}
+.index_banner_lb{
+	width: auto;
+	height: 360px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@extend %clearfix;
+	li{
+	  width: 660px;
+	  height: 360px;
+	  float: left;
+		img{
+			width: 660px;
+			height: 360px;
+		}
+	}
+}
+.index_banner_indicaters{
+	width: 660px;
+	text-align: center;
+	font-size: 0;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	a{
+		@include inlineblock(top);
+		width: 40px;
+		height: 8px;
+		background: #fff;
+		margin: 0 5px;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		-ms-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		transition: all 0.2s;
+		&:hover{
+			background: #cc3333;
+		}
+	}
+	a.active{
+		background: #cc3333 ;
+	}
+}
+.cadlab_top{
+	width: 260px;
+	height: 86px;
+    overflow:visible;
+	position: relative;
+	.cadlab_top_bg{
+		width: 258px;
+		height: 86px;
+		overflow: hidden;
+		position: relative;
+		&:before{
+			display: block;
+			content: "";
+			width: 258px;
+			height: 86px;
+			background: #333;
+			transform: translate(0,-7px) skew(0,-3deg);
+		}
+	}
+	.cadlab_top_info{
+		width: 260px;
+		height: 86px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		img{
+			position: absolute;
+			top: 15px;
+			left: 11px;
+		}
+	}
+	.cadlab_intro{
+		width: 260px;
+		padding: 20px 11px 0 78px;
+		font-size: 16px;
+		color: #fff;
+		font-weight: bold;
+		line-height: 20px;
+		em{
+			color: #cc3333;
+			font-weight: bold;
+		}
+		span{
+			color: #999;
+			font-size: 14px;
+		}
+	}
+	.circle{
+		display: block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #ffcc00;
+		text-align: center;
+		font-size: 14px;
+		color: #333;
+		position: absolute;
+		right: 14px;
+		bottom: -9px;
+		line-height: 18px;
+		padding-top: 5px;
+	}
+}
+.cadlab_num{
+	width: 100%;
+	padding: 15px 0 20px;
+	font-size: 28px;
+	color: #333;
+	text-align: center;
+	line-height: 1;
+	span{
+		font-size: 14px;
+		color: #666;
+	}
+}
+.cadlab_sendbtn{
+	display: block;
+	width: 230px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #cc3333;
+	font-size: 16px;
+	color: #fff;
+	margin: 0 auto;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.index_latestnews{
+	width: 100%;
+	border-top: 1px solid #e5e5e5;
+	padding: 18px 14px 0;
+	line-height: 1;
+	margin-top: 20px;
+	h5{
+		width: 100%;
+		font-size: 14px;
+		color: #333;
+		font-weight: bold;
+		padding-bottom: 18px;
+	}
+}
+.index_latestlb{
+	width: 100%;
+	height: 58px;
+	overflow: hidden;
+	ul{
+		width: 100%;
+		position: relative;
+		top: 0;
+	}
+   li{
+	   width: 100%;
+	   padding-bottom: 15px;
+	   line-height: 1;
+	   a{
+		   font-size: 14px;
+		   color: #333;
+		   &:hover{
+			   color: #cc3333;
+		   }
+	   }
+	   &:before{
+		   display: inline-block;
+		   vertical-align: middle;
+		   content: "";
+		   width: 4px;
+		   height: 4px;
+		   background: #666;
+		   margin-right: 9px;
+	   }
+   }
+}
+.mx_wrap{
+	@extend %wraper;
+}
+.top_label{
+	@include justify(1180px);
+	margin-top: 40px;
+	margin-bottom: 30px;
+	h3,.label_more{
+		@include inlineblock();
+	}
+	h3{
+		font-size: 28px;
+		color: #333;
+		font-weight: normal;
+		line-height: 1;
+	}
+	.label_more{
+		font-size: 14px;
+		color: #666;
+		line-height: 1;
+		&:hover{
+			color: #cc3333;
+		}
+	}
+}
+.top_label.tp20{
+	margin-top: 20px;
+}
+
+.indextask_wrap{
+	width: 100%;
+	min-width: 1200px;
+	background: #f2f2f2;
+	.indextask_content{
+		@extend %wraper;
+	}
+}
+.task_label{
+	padding: 34px 0 23px;
+	@include justify(1180px);
+	h3,.task_more{
+		@include inlineblock();
+		line-height: 1;
+	}
+	h3{
+		font-size: 28px;
+		color: #333;
+		font-weight: normal;
+		a{
+			@include inlineblock();
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background: #cc3333;
+			margin-left: 30px;
+			font-size: 16px;
+			color: #fff;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+	.task_more{
+		font-size: 14px;
+		color: #666;
+		&:hover{
+			color: #cc3333;
+		}
+	}
+}
+.index_task_lb{
+	width: 1180px;
+	@extend %clearfix;
+	padding-bottom: 23px;
+	li{
+		width: 380px;
+		height: 135px;
+		@extend %fl;
+		background: #fff;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		padding: 25px 20px 28px;
+		&:hover{
+			@include boxshadow01(0,0,6px,0.2);
+		}
+	}
+	li:nth-of-type(3n){
+		margin-right: 0;
+	}
+}
+.index_task_name{
+	width: 340px;
+	line-height: 1;
+	padding-bottom: 18px;
+	font-size: 16px;
+	color: #333;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 70px;
+	span{
+		width: 60px;
+		text-align: right;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-size: 14px;
+		color: #cc3333;
+		line-height: 1;
+		margin-top: 2px;
+	}
+}
+a.index_task_name_link:hover .index_task_name{
+	color: #cc3333;
+}
+.index_task_price{
+	width: 100%;
+	font-size: 16px;
+	color: #cc3333;
+	font-weight: bold;
+	padding-bottom: 18px;
+}
+.index_task_state{
+	width: 100%;
+	font-size: 0;
+	span{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		color: #666;
+		line-height: 1;
+	}
+	.person_nums{
+		padding-right: 13px;
+		margin-right: 13px;
+		position: relative;
+		border-right: 1px solid #666;
+	}
+}
+.index_news_wrap{
+	@extend %wraper;
+}
+.index_news_content{
+	width: 1180px;
+	@extend %clearfix;
+	padding-bottom: 65px;
+}
+.index_news_recommend{
+	width: 380px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #e5e5e5;
+	@extend %fl;
+	img{
+		width: 380px;
+		height: 254px;
+	}
+	h6{
+		width: 100%;
+		font-size: 20px;
+		color: #333;
+		padding:20px 0 15px;
+		line-height: 1;
+		font-weight: 500;
+	}
+	p{
+		width: 100%;
+		font-size: 14px;
+		color: #666;
+		line-height: 24px;
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-break: break-all;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp:3;
+	}
+}
+.index_news_rencent,.index_cad_course{
+	width: 360px;
+	@extend %fl;
+	h5{
+		width: 100%;
+		font-size: 20px;
+		color: #333;
+		font-weight: bold;
+		padding-bottom: 24px;
+		line-height: 1;
+	}
+	ul{
+		width: 360px;
+	}
+	ul li{
+		width: 100%;
+		padding-bottom: 25px;
+		h6{
+			width: 100%;
+			font-size: 16px;
+			color: #333;
+			font-weight: 500;
+			padding-bottom: 15px;
+			line-height: 1;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		a:hover h6{
+			color: #cc3333;
+		}
+		p{
+			width: 100%;
+			font-size: 14px;
+			color: #666;
+			line-height: 1;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+.index_news_rencent{
+	margin: 0 40px;
+}

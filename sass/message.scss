@@ -1,0 +1,140 @@
+@import "reset.scss";
+@import "common.scss";
+
+.message_tab{
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	font-size: 0;
+	a{
+     @include inlineblock();
+	 border-bottom: 2px solid transparent;
+	 font-size: 14px;
+	 color: #333;
+	 margin-right: 30px;
+	 font-weight: bold;
+	 padding-bottom: 10px;
+	 &:hover{
+			color: #db2b22;
+	 }
+	}
+	a.active{
+		color: #db2b22;
+		font-size: 14px;
+		border-bottom: 2px solid #db2b22;
+	}
+}
+.message_lb{
+	width: 880px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+	.col01{
+		width: 70px;
+	}
+	.col02{
+		width: 370px;
+	}
+	.col03{
+		width: 140px;
+	}
+	.col04{
+		width: 200px;
+	}
+	.col05{
+		width: 100px;
+	}
+}
+.message_lb thead th{
+	height: 40px;
+	background: #f4f4f4;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+.message_lb tbody td{
+	vertical-align: top;
+	padding: 20px 10px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.message_lb tbody td.message_state,.message_lb tbody td.message_original,
+.message_lb tbody td.message_time,.message_lb tbody td.message_ope{
+	text-align: center;
+}
+.message_lb tbody td.message_title{
+	text-align: left;
+	.message_title_line{
+		width: 100%;
+		font-size: 14px;
+		color: #000;
+		cursor: pointer;
+	}
+	.message_title_intro{
+		width: 100%;
+		font-size: 12px;
+		color: #666;
+		line-height: 18px;
+		margin-top: 15px;
+		display: none;
+	}
+}
+.message_state input[type=checkbox]{
+	cursor: pointer;
+}
+.message_state input[type=checkbox],.message_state i{
+	@include inlineblock();
+}
+.message_state i{
+	width: 16px;
+	height: 17px;
+	background: url("../images/icon-sprite01.png") no-repeat -484px -24px;
+	margin-left: 10px;
+	margin-top: -2px;
+}
+.message_state i.readed_icon{
+	background-position: -507px -24px;
+}
+.message_original,.message_time{
+	font-size: 14px;
+	color: #666;
+}
+.message_ope{
+	text-align: center;
+	.delmessage_btn{
+		font-size: 14px;
+		color: #333;
+		&:hover{
+			color: #db2b22;
+		}
+	}
+}
+.message_lb tfoot .message_foot{
+	font-size: 0;
+	border: 0;
+	padding-top: 20px;
+}
+.message_lb .selectall_wrap,.message_lb .markread_btn,.message_lb .delall_btn,.message_lb .clearall_btn{
+  @include inlineblock();
+	width: 100px;
+	height: 32px;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	margin-right: 10px;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	line-height: 30px;
+}
+.message_lb .selectall_wrap input[type=checkbox]{
+   @include inlineblock();
+	margin-top: -4px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.message_lb .markread_btn,.message_lb .delall_btn,.message_lb .clearall_btn{
+	&:hover{
+		border: 1px solid #db2b22;
+		color: #db2b22;
+	}
+}

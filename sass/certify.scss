@@ -1,0 +1,257 @@
+@import "reset.scss";
+@import "common.scss";
+@import "widget/webupload.scss";
+
+.certify_title{
+	width:100%;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	line-height: 1;
+}
+.certify_intro01{
+	width:100%;
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 20px;
+	line-height: 1;
+}
+.certify_intro02{
+	width:100%;
+	font-size: 14px;
+	color: #333;
+	line-height: 24px;
+}
+.certify_item{
+	width:100%;
+	margin-bottom: 30px;
+	@extend %clearfix;
+}
+.certify_txt{
+	@include txt01(515px,36px,#e5e5e5);
+}
+.certify_label,.certify_info{
+	@extend %fl;
+	display: block;
+}
+.certify_label{
+  width: 88px;
+  text-align: right;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	line-height: 36px;
+}
+.certify_info{
+	width: 792px;
+	font-size: 0;
+}
+.certify_error{
+    width: 515px;
+	font-size: 12px;
+	color: #db2b22;
+	padding-top: 5px;
+	display:none;
+}
+.dropdown_wrap_city{
+	@include dropdownwrap(200px,36px);
+	@include inlineblock();
+}
+.dropdown_link_city{
+	@include dropdownlink(200px,36px,13px);
+}
+.dropdown_menu_city{
+	@extend %dropdownmenu;
+}
+.mr5{
+	margin-right: 5px;
+}
+.mt10{
+	margin-top: 10px;
+}
+.card_lf,.card_rh{
+	@extend %fl;
+}
+.card_lf{
+	width: 590px;
+	border-right: 1px solid #e5e5e5;
+	padding-right: 20px;
+}
+.card_rh{
+	width: 290px;
+	padding-top: 35px;
+	padding-left: 30px;
+}
+.card_lf_label{
+	width:100%;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+.card_lf_intro{
+	width:100%;
+	font-size: 14px;
+	color: #999;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.card_area{
+	width: 589px;
+	@extend %clearfix;
+	.card_pic,.card_btns{
+      @extend %fl;
+	}
+	.card_pic{
+		width: 180px;
+		height: 120px;
+		background: #f4f4f4;
+		border: 1px solid #e5e5e5;
+		margin-right: 20px;
+		img{
+			display: block;
+			width: 154px;
+			height: 100px;
+			margin: 10px auto;
+		}
+	}
+	.card_btns{
+		width: 100px;
+	}
+	.selectfile_btn{
+		@include btn01(100px,32px,#db2b22,14px);
+		margin-bottom: 10px;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	.selectfile_btn_again{
+		@include btn01(100px,32px,#666,14px);
+		display:none;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.card_rh_label{
+    width:100%;
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 15px;
+}
+.card_rh_egpic{
+	width: 150px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	height: 95px;
+	overflow: hidden;
+	img{
+		width: 150px;
+		height: 95px;
+		display: block;
+	}
+}
+.certify_yz_txt{
+	@include txt01(190px,36px,#e5e5e5);
+}
+.certify_yz_btn{
+	@include btn01(120px,36px,#db2b22,14px);
+	margin-left: 10px;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.certify_yz_btned{
+	background:#888;
+	cursor:not-allowed;
+	&:hover{
+	opacity:1;
+	}
+}
+.certify_submit_wrap{
+	width:100%;
+	padding-top: 20px;
+	a{
+		@include btn01(120px,40px,#db2b22,16px);
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+.mt30{
+	margin-top: 30px;
+}
+.checkstate_wrap{
+	width: 100%;
+	padding: 45px 0 60px;
+	.checking_icon{
+		display: block;
+		width: 127px;
+		height: 142px;
+		background: url("../images/icon-sprite01.png") no-repeat left -206px;
+		margin:0 auto 45px;
+	}
+	.check_success{
+		display: block;
+		width: 127px;
+		height: 142px;
+		margin:0 auto 45px;
+		background: url("../images/icon-sprite01.png") no-repeat left -365px;
+	}
+	.check_fail{
+		display: block;
+		width: 122px;
+		height: 121px;
+		margin:0 auto 45px;
+		background: url("../images/icon-sprite01.png") no-repeat -135px -129px;
+	}
+	.checking_intro{
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		color: #4d4d4d;
+	}
+	.check_rewrite{
+		width: 100%;
+		text-align: center;
+		padding-top: 10px;
+		font-size: 16px;
+		color: #db2b22;
+		a{
+			color: #db2b22;
+			&:hover{
+				opacity:0.8;
+			};
+		}
+	}
+}
+.check_infos{
+	width: 100%;
+	border-top:1px solid #e5e5e5;
+	padding:45px 25px 40px;
+}
+.check_infos_list{
+	width: 100%;
+	li{
+		width: 100%;
+		font-size: 0;
+		margin-bottom: 20px;
+		.check_infos_label,.check_infos_cont{
+			display: inline-block;
+			font-size: 14px;
+			color: #666;
+		}
+		.check_infos_label{
+			width: 115px;
+		}
+		.check_infos_cont{
+			width: -webkit-calc(100% - 115px);
+			width: -moz-calc(100% - 115px);
+			width: -ms-calc(100% - 115px);
+			width: -o-calc(100% - 115px);
+			width: calc(100% - 115px);
+		}
+	}
+}
